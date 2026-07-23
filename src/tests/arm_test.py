@@ -21,8 +21,8 @@ def runCountdown(length : int = 5, warning : int = 3):
 		
 while True:
 	Arm1.run_target(500, 0)
-	Arm2.run_target(500, 0)
+	Arm2.run_target(500, 90)
 	runCountdown(5, 3)
 	Arm1.run_target(500, 90)
-	Arm2.run_target(500, 90)
+	Arm2.run_target(500, 0)
 	runCountdown(5, 3)
