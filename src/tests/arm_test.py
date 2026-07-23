@@ -9,7 +9,7 @@ HUB = PrimeHub()
 Arm1 = Motor(Port.C)
 Arm2 = Motor(Port.D)
 
-def runCountdown(length : int = 10, warning : int = 3):
+def runCountdown(length : int = 5, warning : int = 3):
 	HUB.light.on(Color.YELLOW)
 	for i in range(length, 0, -1):
 		HUB.display.number(i)
@@ -23,6 +23,6 @@ while True:
 	Arm1.run_target(500, 0)
 	Arm2.run_target(500, 0)
 	runCountdown(10, 3)
-	Arm1.run_target(500, 90)
-	Arm2.run_target(500, 90)
+	Arm1.run_target(500, 180)
+	Arm2.run_target(500, 180)
 	runCountdown(10, 3)
