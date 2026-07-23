@@ -23,6 +23,6 @@ while True:
 	Arm1.run_target(500, 0, then=Stop.HOLD)
 	Arm2.run_target(500, 90, then=Stop.HOLD)
 	runCountdown(5, 3)
-	Arm1.run_target(500, 90,then=Stop.HOLD)
+	Arm1.run_target(500, 90, then=Stop.HOLD)
 	Arm2.run_target(500, 0, then=Stop.HOLD)
 	runCountdown(5, 3)
