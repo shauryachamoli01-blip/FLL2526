@@ -7,7 +7,7 @@ from pybricks.tools import wait, StopWatch
 HUB = PrimeHub()
 
 Arm1 = Motor(Port.C)
-Arm2 = Motor(Port.D)
+Arm2 = Motor(Port.D, Direction.COUNTERCLOCKWISE)
 
 def runCountdown(length : int = 5, warning : int = 3):
 	HUB.light.on(Color.YELLOW)
@@ -21,8 +21,8 @@ def runCountdown(length : int = 5, warning : int = 3):
 		
 while True:
 	Arm1.run_target(500, 0, then=Stop.HOLD)
-	Arm2.run_target(500, 90, then=Stop.HOLD)
+	Arm2.run_target(500, 0, then=Stop.HOLD)
 	runCountdown(5, 3)
 	Arm1.run_target(500, 90, then=Stop.HOLD)
-	Arm2.run_target(500, 0, then=Stop.HOLD)
+	Arm2.run_target(500, 90, then=Stop.HOLD)
 	runCountdown(5, 3)
